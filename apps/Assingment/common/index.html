@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html>
+    	<head>
+    		<meta charset="UTF-8">
+    		<title>Assingment</title>
+			<meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+			<meta name="apple-mobile-web-app-capable" content="yes">
+			<!--
+    			<link rel="shortcut icon" href="images/favicon.png">
+    			<link rel="apple-touch-icon" href="images/apple-touch-icon.png"> 
+    		-->
+    		<link rel="stylesheet" href="css/main.css">
+    		<script>window.$ = window.jQuery = WLJQ;</script>
+    		<script type="text/javascript" src="dojox/mobile/deviceTheme.js"></script>
+    		<script type="text/javascript" data-dojo-config="isDebug: false, async: true, parseOnLoad: true, mblHideAddressBar: false" src="dojo/dojo.js"></script>
+  </head>
+    <body style="display: none;">
+    <div data-dojo-type="dojox.mobile.ScrollableView" id="view0" data-dojo-props="selected:true">
+		<div data-dojo-type="dojox.mobile.Heading" style="background:#27292c;" data-dojo-props="label:'Manager Student'"></div>
+		<ul data-dojo-type="dojox.mobile.TabBar"   fixed="bottom" >
+
+			<li data-dojo-type="dojox.mobile.TabBarButton" style=""
+				data-dojo-props="moveTo:'view1',icon:'images/ic_add.png'">Insert Student</li>
+			<li data-dojo-type="dojox.mobile.TabBarButton" style=""
+				data-dojo-props="moveTo:'view2',icon:'images/ic_manager.png'">Information Student</li>	
+		</ul>
+		<div data-dojo-type="dojox.mobile.View" id="view1"
+			data-dojo-props="selected:true">
+<!------------ form add information student --------------->			
+			<div id="layoutForm">	
+				<form name="ifstudent" action="#" method="#" >
+				<div class="form-3">
+				 <p class="clearfix">
+				 <label for="login">Nhập ID</label>
+					<input type="text" id="txtid" placeholder="Nhập ID "><br> </p>
+					<p class="clearfix">
+					<label for="login">Nhập Tên</label>
+					<input type="text" id="txtname" placeholder="Nhập Tên  "><br></p>
+					</div>
+					<p class="clearfix">
+					<div class="form-3">
+					<label for="login">NHập Lớp</label>
+					<input type="text" id="txtclass" placeholder="Nhập Lớp"><br></p>
+					<p class="clearfix">
+					<label for="login">Nhập Điểm</label>
+					<input type="text" id="txtmark" placeholder="Nhập điểm"><br></p>
+					</div>
+					<div class="form-3">
+					<p class="clearfix">	
+					<input type="button" value="Reset" id="tbnreset">
+					<input type="button" value="Submit" id="tbnsubmit" onclick="putData();"></p>
+					</div>				
+				</form>
+			</div>	
+<!-- ----------------------------------------- -->			
+			</div>
+		<div data-dojo-type="dojox.mobile.View" id="view2"
+			data-dojo-props="selected:false">
+			<ul data-dojo-type="dojox.mobile.TabBar" fixed="bottom">
+				<li data-dojo-type="dojox.mobile.TabBarButton"  style=""
+				data-dojo-props="moveTo:'view3'">Show student</li>
+				<li data-dojo-type="dojox.mobile.TabBarButton" style=""
+				data-dojo-props="moveTo:'view4'">Delete student</li>
+				<li data-dojo-type="dojox.mobile.TabBarButton" style=""
+				data-dojo-props="moveTo:'view5'">Update student</li>
+			</ul>
+			<div data-dojo-type="dojox.mobile.View" id="view3"
+				data-dojo-props="selected:true">
+				<div data-dojo-type="dojox.mobile.Accordion">
+					<div id="content" data-dojo-type="dojox.mobile.ContentPane" style="background:#fff;" data-dojo-props='label:"List student"'>
+						</div>
+				</div>
+				<div ></div>
+			</div>
+			<div data-dojo-type="dojox.mobile.View" id="view4"
+				data-dojo-props="selected:false">
+				<div id="cn_xoa">
+					<div class="form-3">
+					<p class="clearfix">
+					<label for="login">Xoá</label>
+					<input type="text" id="edtxoa" placeholder="Chọn ID để Xoá">
+					<input type="button" value="Delete" id="btndelete" onclick="deleteforid();">
+					</p>
+					</div>
+				</div>
+			</div>
+			<div data-dojo-type="dojox.mobile.View" id="view5"
+				data-dojo-props="selected:false">
+				<div class="form-3">
+				 <p class="clearfix">
+				 <label for="login">Nhập ID</label>
+					<input type="text" id="edtid" placeholder="Nhập ID "><br> </p>
+					<p class="clearfix">
+					<label for="login">Nhập Tên</label>
+					<input type="text" id="edtname" placeholder="Nhập Tên  "><br></p>
+					</div>
+					<p class="clearfix">
+					<div class="form-3">
+					<label for="login">NHập Lớp</label>
+					<input type="text" id="edtclass" placeholder="Nhập Lớp"><br></p>
+					<p class="clearfix">
+					<label for="login">Nhập Điểm</label>
+					<input type="text" id="edtpoint" placeholder="Nhập điểm"><br></p>
+					</div>
+					<div class="form-3">
+					<p class="clearfix">	
+					<input type="button" value="Update" id="btnupdate" onclick="update();"></p>
+					</div>					
+				</div>
+		</div>
+
+
+	</div>
+		
+    		<script src="js/initOptions.js"></script>
+    		<script src="js/main.js"></script>
+    		<script src="js/messages.js"></script>
+    	</body>
+</html>
